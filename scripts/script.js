@@ -1,3 +1,7 @@
+/* Score variables */
+let humanScore = 0;
+let computerScore = 0;
+
 /* Get the Computer's Choice */
 function getComputerChoice () {
   const randomNum = Math.floor(Math.random() * 3);
