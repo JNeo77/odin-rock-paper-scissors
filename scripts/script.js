@@ -47,7 +47,7 @@ function playGame () {
     }
   }
   
-  alert(`Final score - You: ${humanScore} Compter: ${computerScore}`);
+  alert(`Final score - You: ${humanScore} Computer: ${computerScore}`);
 }
 
 playGame();
