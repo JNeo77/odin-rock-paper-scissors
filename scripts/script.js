@@ -21,8 +21,26 @@ function getComputerChoice () {
 /* Get the Human Choice via Prompt */
 function getHumanChoice () {
   alert("Welcome to Rock, Paper, Scissors!");
-  const humanChoice = prompt('Enter "rock", "paper", or "scissors".');
-  return humanChoice.toLowerCase();
+  const human = prompt('Enter "rock", "paper", or "scissors".');
+  return human.toLowerCase();
 }
 
+/* Playing a round */
+function playRound (humanChoice, computerChoice) {
+  if ((humanChoice === 'rock' && computerChoice === 'scissors') ||
+      (humanChoice === 'scissors' && computerChoice === 'paper') ||
+      (humanChoice === 'paper' && computerChoice === 'rock')) {
+    humanScore += 1;
+    console.log(`You win - ${humanChoice} beats ${computerChoice}!`);
+  } else if (humanChoice === computerChoice) {
+    console.log(`It's a tie!`);
+  } else {
+    computerScore += 1;
+    console.log(`Computer wins - ${computerChoice} beats ${humanChoice}`);
+  };
+}
 
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
